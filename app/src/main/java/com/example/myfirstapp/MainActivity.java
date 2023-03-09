@@ -22,5 +22,14 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText("BTN ON!");
             }
         });
+
+        btn = findViewById(R.id.helloBTN);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView tv = findViewById(R.id.snumTextView);
+                tv.setText("Hello?");
+            }
+        });
     }
 }
