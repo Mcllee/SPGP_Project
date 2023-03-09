@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,22 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Button btn = findViewById(R.id.pushMeBTN);
-        btn.setOnClickListener(this);
-
-//        TextView tv = findViewById(R.id.snumTextView);
-//        tv.setText("Just Loaded");
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.pushMeBTN:
-
-                break;
-            case R.id.snumTextView:
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 TextView tv = findViewById(R.id.snumTextView);
                 tv.setText("BTN ON!");
-                break;
-        }
+            }
+        });
     }
 }
