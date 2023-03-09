@@ -23,7 +23,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        TextView tv = findViewById(R.id.snumTextView);
-        tv.setText("BTN ON!");
+        switch (view.getId()) {
+            case R.id.pushMeBTN:
+
+                break;
+            case R.id.snumTextView:
+                TextView tv = findViewById(R.id.snumTextView);
+                tv.setText("BTN ON!");
+                break;
+        }
     }
 }
