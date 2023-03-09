@@ -31,6 +31,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="148dp"
         android:text="Push Me!"
+        android:onClick="onButtonPushMe"
         app:layout_constraintEnd_toStartOf="@+id/helloBTN"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +45,7 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="80dp"
         android:text="Button"
+        android:onClick="OnButtonHello"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
