@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private int[] resIds = new int[] {
+    private static final int[] IMG_RES_IDS = new int[] {
             R.mipmap.card_as,
             R.mipmap.card_2c,
             R.mipmap.card_3d,
@@ -46,14 +46,13 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void setPage(int page) {
-        if(page < 1 || page > 9) return;
+        if(page < 1 || page > IMG_RES_IDS.length) return;
 
-
-        int resId = resIds[page - 1];
+        int resId = IMG_RES_IDS[page - 1];
         ImageView mainImageView = findViewById(R.id.mainImageView);
         mainImageView.setImageResource(resId);
         TextView pageTextView = findViewById(R.id.pageTextView);
-        pageTextView.setText(page + " / 9");
+        pageTextView.setText(page + " / " + IMG_RES_IDS.length);
         this.page = page;
     }
 }
